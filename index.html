@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tasks</title>
+</head>
+<body>
+  <h2>JavaScript Tasks Output</h2>
+  <div id="output"></div>
+  <script>
+    let name = "Yuvraj";
+    let address = "Patna, Bihar, India";
+    let output = `1. Name: ${name}\n   Address: ${address}\n\n`;
+
+    function isSameValueAndType(a, b) {
+      return a === b;
+    }
+    output += `2. isSameValueAndType(5, '5'): ${isSameValueAndType(5, '5')}\n`;
+    output += `   isSameValueAndType(5, 5): ${isSameValueAndType(5, 5)}\n\n`;
+
+    function addStringsUpper(str1, str2) {
+      return (str1 + str2).toUpperCase();
+    }
+    output += `3. addStringsUpper('hello', 'world'): ${addStringsUpper('hello', 'world')}\n\n`;
+
+    function stringLengthInBytes(str) {
+      return new TextEncoder().encode(str).length;
+    }
+    output += `4. stringLengthInBytes('hello'): ${stringLengthInBytes('hello')} bytes\n\n`;
+
+    function roundToDigits(num, digits) {
+      return Number(num.toFixed(digits));
+    }
+    output += `5. roundToDigits(3.14159, 2): ${roundToDigits(3.14159, 2)}\n`;
+
+    document.getElementById('output').innerHTML = output.replace(/\n/g, "<br>");
+  </script>
+</body>
+</html>
