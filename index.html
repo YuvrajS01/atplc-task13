@@ -5,35 +5,38 @@
   <title>JavaScript Tasks</title>
 </head>
 <body>
-  <h2>JavaScript Tasks Output</h2>
-  <div id="output"></div>
+  <h2>JavaScript Tasks Output (Check Console)</h2>
   <script>
+    // 1. Print your name and address
     let name = "Yuvraj";
     let address = "Patna, Bihar, India";
-    let output = `1. Name: ${name}\n   Address: ${address}\n\n`;
+    console.log(`1. Name: ${name}`);
+    console.log(`   Address: ${address}\n`);
 
+    // 2. Check whether value and data-type of two variables are same
     function isSameValueAndType(a, b) {
       return a === b;
     }
-    output += `2. isSameValueAndType(5, '5'): ${isSameValueAndType(5, '5')}\n`;
-    output += `   isSameValueAndType(5, 5): ${isSameValueAndType(5, 5)}\n\n`;
+    console.log(`2. isSameValueAndType(5, '5'): ${isSameValueAndType(5, '5')}`);
+    console.log(`   isSameValueAndType(5, 5): ${isSameValueAndType(5, 5)}\n`);
 
+    // 3. Add two strings and return them with all alphabet capital
     function addStringsUpper(str1, str2) {
       return (str1 + str2).toUpperCase();
     }
-    output += `3. addStringsUpper('hello', 'world'): ${addStringsUpper('hello', 'world')}\n\n`;
+    console.log(`3. addStringsUpper('hello', 'world'): ${addStringsUpper('hello', 'world')}\n`);
 
+    // 4. Convert the length of given string in bytes
     function stringLengthInBytes(str) {
       return new TextEncoder().encode(str).length;
     }
-    output += `4. stringLengthInBytes('hello'): ${stringLengthInBytes('hello')} bytes\n\n`;
+    console.log(`4. stringLengthInBytes('hello'): ${stringLengthInBytes('hello')} bytes\n`);
 
+    // 5. Round a number to a specified amount of digits
     function roundToDigits(num, digits) {
       return Number(num.toFixed(digits));
     }
-    output += `5. roundToDigits(3.14159, 2): ${roundToDigits(3.14159, 2)}\n`;
-
-    document.getElementById('output').innerHTML = output.replace(/\n/g, "<br>");
+    console.log(`5. roundToDigits(3.14159, 2): ${roundToDigits(3.14159, 2)}`);
   </script>
 </body>
 </html>
